@@ -1,0 +1,88 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: 3fr 0.8fr 1fr;
+  width: 955px;
+  height: 350px;
+  border: 2px solid black;
+  border-radius: 1rem;
+
+  /* background-color: #232323; */
+}
+
+.main--keys {
+  /* background-color: blue; */
+  display: grid;
+  grid-template-rows: 0.25fr 1fr;
+}
+
+.key {
+  background-color: blue;
+}
+
+.function--keys {
+  background-color: gold;
+  display: flex;
+  flex-direction: row;
+}
+
+.function__sections {
+  display: flex;
+  align-items: first baseline;
+  margin-inline: 10px;
+}
+
+
+.Keys_function-key {
+  margin-inline: 5px;
+}
+
+.alpha-keys {
+  background-color: black;
+}
+
+.control-keys {
+  background-color: brown;
+  display: grid;
+  grid-template-rows: 0.50fr 0.75fr 1fr;
+}
+
+
+.special-keys {
+  background-color: black;
+}
+
+.editing-keys {
+  background-color: blue;
+}
+
+.direction-keys {
+  background-color: chartreuse;
+}
+
+.end-keys {
+  display: grid;
+  grid-template-rows: 0.25fr 1fr;
+  background-color: red;
+}
+
+.leds {
+  background-color: chocolate;
+}
+
+.number-keys {
+  background-color: aqua;
+
+}
