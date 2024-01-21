@@ -18,40 +18,79 @@
   height: 350px;
   border: 2px solid black;
   border-radius: 1rem;
-
-  /* background-color: #232323; */
+  background-color: #232323;
 }
 
 .main--keys {
-  /* background-color: blue; */
   display: grid;
   grid-template-rows: 0.25fr 1fr;
 }
 
 .key {
-  background-color: blue;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #282828, #202020);
+  box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 0.5px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
 }
 
+.key::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  bottom: 6px;
+  right: 8px;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 4px;
+  box-shadow: -5px -5px 10px rgba(225, 225, 225, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.4);
+  border-top: 0.8px solid #0009;
+  border-left: 0.8px solid #0004;
+  border-bottom: 0.8px solid #0004;
+  z-index: -1;
+}
+
+/*FUNCTION KEYS*/
+
 .function--keys {
-  background-color: gold;
   display: flex;
   flex-direction: row;
+
 }
 
 .function__sections {
   display: flex;
-  align-items: first baseline;
+  align-items: center;
   margin-inline: 10px;
+  gap: 3px;
 }
 
 
-.Keys_function-key {
-  margin-inline: 5px;
+.keys-function {
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  font-size: 10px;
+  padding-left: 6px;
+  padding-top: 5px;
+
+
 }
+
+/*ALPHA KEYS*/
 
 .alpha-keys {
   background-color: black;
 }
+
+/*CONTROL KEYS*/
 
 .control-keys {
   background-color: brown;
@@ -59,29 +98,38 @@
   grid-template-rows: 0.50fr 0.75fr 1fr;
 }
 
-
+/*SPECIAL KEYS*/
 .special-keys {
   background-color: black;
 }
 
+/*EDITING KEYS*/
 .editing-keys {
   background-color: blue;
 }
 
+
+/*DIRECTION KEYS*/
 .direction-keys {
   background-color: chartreuse;
 }
 
+
+/*END KEYS*/
 .end-keys {
   display: grid;
   grid-template-rows: 0.25fr 1fr;
   background-color: red;
 }
 
+
+/*LED SECTION*/
 .leds {
   background-color: chocolate;
 }
 
+
+/*NUMBER KEYS*/
 .number-keys {
   background-color: aqua;
 
