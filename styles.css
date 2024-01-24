@@ -18,7 +18,7 @@
   height: 350px;
   border: 2px solid black;
   border-radius: 1rem;
-  background-color: #232323;
+  background-color: #3d3c3c;
 }
 
 .main--keys {
@@ -29,7 +29,7 @@
 .key {
   position: relative;
   display: inline-block;
-  width: 40px;
+  width: 45px;
   height: 40px;
   border-radius: 5px;
   background: linear-gradient(180deg, #282828, #202020);
@@ -38,23 +38,24 @@
     0 0 0 0.5px rgba(0, 0, 0, 0.75),
     10px 20px 25px rgba(0, 0, 0, 0.4);
   overflow: hidden;
-
 }
 
 .key::before {
   content: "";
+  display: flex;
   position: absolute;
   top: 2px;
   left: 3px;
   bottom: 6px;
   right: 8px;
   background: linear-gradient(90deg, #232323, #4a4a4a);
-  border-radius: 4px;
   box-shadow: -5px -5px 10px rgba(225, 225, 225, 0.25),
     10px 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
   border-top: 0.8px solid #0009;
   border-left: 0.8px solid #0004;
   border-bottom: 0.8px solid #0004;
+
   z-index: -1;
 }
 
@@ -63,31 +64,139 @@
 .function--keys {
   display: flex;
   flex-direction: row;
+  padding-top: 15px;
+  padding-left: 5px;
 
 }
 
 .function__sections {
   display: flex;
   align-items: center;
-  margin-inline: 10px;
+  margin-inline: 12px;
   gap: 3px;
+
 }
 
-
-.keys-function {
+.keys-function,
+.keys-data,
+.keys-data--back,
+.keys-data--tab,
+.keys-data--block,
+.keys-data--shift,
+.keys-data--ctrl,
+.keys-data--alt,
+.keys-data--space {
   color: rgb(255, 255, 255);
   z-index: 2;
   font-size: 10px;
   padding-left: 6px;
   padding-top: 5px;
-
-
 }
 
 /*ALPHA KEYS*/
 
-.alpha-keys {
-  background-color: black;
+.alpha--keys {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding-left: 16px;
+}
+
+.alpha-keys__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.alpha-keys__sections {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 4px;
+  margin-right: 12px;
+}
+
+.alpha-data__section {
+  display: flex;
+  flex-direction: row;
+
+  gap: 3px;
+}
+
+/* KEYS SPECIAL */
+.keys-data--back {
+  width: 14%;
+}
+
+.keys-data--tab {
+  width: 8%;
+}
+
+.keys-data--block {
+  width: 10%;
+}
+
+
+.key-enter {
+  width: 52px;
+  height: 40px;
+  top: 1px;
+  right: -1px;
+  border-radius: 5px 5px 0 5px;
+  background: linear-gradient(180deg, #282828, #202020);
+  /* box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 0.5px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4); */
+  overflow: hidden;
+
+  border-top: 0.5px solid;
+  border-left: 0.5px solid;
+  border-right: 0.5px solid;
+  border-bottom: 0.5px solid;
+
+}
+
+.key-enter--low {
+  position: absolute;
+  width: 35px;
+  height: 45px;
+  top: 83px;
+  right: 0px;
+  border-radius: 0 0 5px 5px;
+  background: #202020;
+  /* box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 0.5px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4); */
+  overflow: hidden;
+  border-left: 0.5px solid;
+  border-bottom: 0.5px solid;
+  border-right: 0.5px solid;
+}
+
+.key-enter::before,
+.key-enter--low::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  bottom: 6px;
+  right: 8px;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 4px;
+
+
+  z-index: -1;
+}
+
+
+
+.keys-data--shift {
+  width: 16%;
+}
+
+.keys-data--ctrl,
+.keys-data--alt {
+  width: 9%;
+}
+
+.keys-data--space {
+  width: 50%;
 }
 
 /*CONTROL KEYS*/
