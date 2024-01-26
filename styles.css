@@ -35,7 +35,7 @@
   background: linear-gradient(180deg, #282828, #202020);
   box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
     inset 0 -8px 8px rgba(0, 0, 0, 0.25),
-    0 0 0 0.5px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 0.5px rgba(0, 0, 0, 0.75),
     10px 20px 25px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
@@ -61,20 +61,28 @@
 
 /*FUNCTION KEYS*/
 
-.function--keys {
+.function--keys,
+.control--keys,
+.control--keys {
   display: flex;
   flex-direction: row;
-  padding-top: 15px;
+  padding-top: 25px;
   padding-left: 5px;
 
 }
 
-.function__sections {
+.function-keys__sections,
+.special-keys__section,
+.editing-keys__section {
   display: flex;
   align-items: center;
   margin-inline: 12px;
   gap: 3px;
 
+  border-radius: 5px;
+  border: 1.5px solid #3D3C3C;
+  box-shadow: 0px 0px 0px 2px #0004,
+    0px 0px 0px 4px #1d1c1c99;
 }
 
 .keys-function,
@@ -84,8 +92,12 @@
 .keys-data--block,
 .keys-data--shift,
 .keys-data--ctrl,
+.keys-data--icon,
 .keys-data--alt,
-.keys-data--space {
+.keys-data--menu,
+.keys-data--space,
+.keys-special,
+.keys-editing {
   color: rgb(255, 255, 255);
   z-index: 2;
   font-size: 10px;
@@ -112,17 +124,23 @@
   flex-direction: column;
   position: relative;
   gap: 4px;
+  margin-top: 20px;
   margin-right: 12px;
+
+  border-radius: 5px;
+  border: 2px solid #3D3C3C;
+  box-shadow: 0px 0px 0px 2px #0004,
+    0px 0px 0px 5px #1d1c1c99;
 }
 
-.alpha-data__section {
+.alpha-data__section,
+.special-keys__section {
   display: flex;
   flex-direction: row;
-
   gap: 3px;
 }
 
-/* KEYS SPECIAL */
+/*COMMAND KEYS*/
 .keys-data--back {
   width: 14%;
 }
@@ -135,30 +153,27 @@
   width: 10%;
 }
 
-
 .key-enter {
-  width: 52px;
-  height: 40px;
+  width: 53px;
+  height: 39px;
   top: 1px;
   right: -1px;
   border-radius: 5px 5px 0 5px;
   background: linear-gradient(180deg, #282828, #202020);
   /* box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 0.5px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4); */
   overflow: hidden;
-
   border-top: 0.5px solid;
   border-left: 0.5px solid;
   border-right: 0.5px solid;
   border-bottom: 0.5px solid;
-
 }
 
 .key-enter--low {
   position: absolute;
-  width: 35px;
+  width: 42px;
   height: 45px;
-  top: 83px;
-  right: 0px;
+  top: 80px;
+  right: 2px;
   border-radius: 0 0 5px 5px;
   background: #202020;
   /* box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 0.5px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4); */
@@ -179,49 +194,92 @@
   right: 8px;
   background: linear-gradient(90deg, #232323, #4a4a4a);
   border-radius: 4px;
-
-
   z-index: -1;
 }
 
-
-
 .keys-data--shift {
-  width: 16%;
+  width: 17%;
 }
 
 .keys-data--ctrl,
 .keys-data--alt {
   width: 9%;
+  padding-top: 12px;
 }
 
 .keys-data--space {
   width: 50%;
 }
 
+.keys-data--icon {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.keys-data--menu {
+  padding-top: 12px;
+}
+
 /*CONTROL KEYS*/
 
-.control-keys {
-  background-color: brown;
-  display: grid;
-  grid-template-rows: 0.50fr 0.75fr 1fr;
+.special-keys__section {
+  display: inline-flex;
 }
 
-/*SPECIAL KEYS*/
-.special-keys {
-  background-color: black;
+.editing-keys__section {
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 49px;
 }
 
-/*EDITING KEYS*/
-.editing-keys {
-  background-color: blue;
+.keys-editing,
+.keys-special {
+  font-size: 9px;
 }
 
-
-/*DIRECTION KEYS*/
-.direction-keys {
-  background-color: chartreuse;
+.editing-keys__up,
+.editing-keys__down,
+.direction-keys__up,
+.direction-keys__down {
+  display: flex;
+  gap: 3px;
 }
+
+.direction-keys__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 12px;
+  gap: 3px;
+  border-radius: 5px;
+}
+
+.icon {
+  left: 10px;
+  top: 8px;
+  position: relative;
+}
+
+/* .keys-direction__up {
+  border-top: 1.5px solid #3D3C3C;
+  border-left: 1.5px solid #3d3c3c;
+  border-right: 1.5px solid #3d3c3c;
+  box-shadow: 0px -2px 0px 2px #0004,
+    0px -4px 0px 4px #1d1c1c99;
+}*/
+
+.keys-direction__up,
+.keys-direction__left,
+.keys-direction__down,
+.keys-direction__right {
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  font-size: 10px;
+  padding-left: 6px;
+  padding-top: 5px;
+  border-radius: 0px;
+}
+
 
 
 /*END KEYS*/
