@@ -14,7 +14,7 @@
 .keyboard {
   display: grid;
   grid-template-columns: 3fr 0.8fr 1fr;
-  width: 955px;
+  width: 1200px;
   height: 350px;
   border: 2px solid black;
   border-radius: 1rem;
@@ -282,22 +282,13 @@
 
 
 
-/*END KEYS*/
-.end-keys {
-  display: grid;
-  grid-template-rows: 0.25fr 1fr;
-  background-color: red;
-}
+/*END KEYS
+.end-keys {}
 
 
-/*LED SECTION*/
-.leds {
-  background-color: chocolate;
-}
+/*LED SECTION
+.leds {}*/
 
 
-/*NUMBER KEYS*/
-.number-keys {
-  background-color: aqua;
-
-}
+/*NUMBER KEYS
+ .number-keys {} */
